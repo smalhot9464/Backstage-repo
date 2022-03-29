@@ -1,0 +1,23 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: stormbreaker-batch
+  title: stormbreaker-batch
+  description: A template for developers to create a new stormbreaker integrated Spark application using Java or Scala, including DAG file(s). This template supports one spark compute platforms Qubole and one  Airflow platforms namely MLDP Workflow Orchestration.
+  tags:
+    - mldp-wo
+    - spark
+    - java
+    - qubole
+    - stormbreaker
+spec:
+  owner: smalhot9464@gmail.com
+  type: service
+  parameters:
+    - title: Inject Application Metadata Fields
+      id: inject-app-metadata
+    - title: Provide additional information
+      required:
+        - ci_cd_pipeline_platform
+        - spark_platform
+        - airflow_platform
